@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1795611613011,
+  "timestamp": 1795614071038,
   "index": "https://samirromdhani.github.io/angular-app/index.html",
   "assetGroups": [
     {
@@ -20,7 +20,7 @@
         "https://samirromdhani.github.io/angular-app/931.007f5bfcf2f74a61.js",
         "https://samirromdhani.github.io/angular-app/favicon.ico",
         "https://samirromdhani.github.io/angular-app/index.html",
-        "https://samirromdhani.github.io/angular-app/main.218a7f4ff35c98f0.js",
+        "https://samirromdhani.github.io/angular-app/main.11f9f2685c2325a7.js",
         "https://samirromdhani.github.io/angular-app/manifest.webmanifest",
         "https://samirromdhani.github.io/angular-app/polyfills.06ab09a9ef750ef9.js",
         "https://samirromdhani.github.io/angular-app/runtime.7dc87e2b82c90de3.js",
@@ -76,8 +76,8 @@
     "https://samirromdhani.github.io/angular-app/fontawesome-webfont.cf011583fb81df9f.woff": "28b782240b3e76db824e12c02754a9731a167527",
     "https://samirromdhani.github.io/angular-app/fontawesome-webfont.da909aa098b0ee2d.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
     "https://samirromdhani.github.io/angular-app/fontawesome-webfont.e9955780856cf8aa.woff2": "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c",
-    "https://samirromdhani.github.io/angular-app/index.html": "30d5a0d9b561941086b6df7cef517ba8b37e30ab",
-    "https://samirromdhani.github.io/angular-app/main.218a7f4ff35c98f0.js": "1073b34ed3eb228f0d2e723764854e3bab86a89e",
+    "https://samirromdhani.github.io/angular-app/index.html": "e6fc297d818790d53d4bf8c8ac5f37958b84af1c",
+    "https://samirromdhani.github.io/angular-app/main.11f9f2685c2325a7.js": "c8dd69ac2eee45d351b94417f3812bdfbcadc5e0",
     "https://samirromdhani.github.io/angular-app/manifest.webmanifest": "bd6beb5a3caa036b20f57a539ae50de9b05f67c5",
     "https://samirromdhani.github.io/angular-app/polyfills.06ab09a9ef750ef9.js": "66be110aa5aa2a7cee749fdfcaa4559c2b1cffff",
     "https://samirromdhani.github.io/angular-app/runtime.7dc87e2b82c90de3.js": "768a99f9cdd17ed1f0513b737a9f1915d1cc8fc3",
