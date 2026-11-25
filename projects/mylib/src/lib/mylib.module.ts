@@ -2,11 +2,11 @@ import {NgModule} from '@angular/core';
 import {MylibComponent} from './mylib.component';
 import {CommonModule, NgOptimizedImage} from "@angular/common";
 import {SharedModule} from "./shared.module";
-import {NgxPowsyblSldViewerComponent} from "./ngx-powsybl-sld-viewer/ngx-powsybl-sld-viewer.component";
+import {NgxPowsyblNadViewerComponent} from "./ngx-powsybl-nad-viewer/component";
 
 
 @NgModule({
-  declarations: [MylibComponent, NgxPowsyblSldViewerComponent],
+  declarations: [MylibComponent, NgxPowsyblNadViewerComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -15,7 +15,7 @@ import {NgxPowsyblSldViewerComponent} from "./ngx-powsybl-sld-viewer/ngx-powsybl
   providers: [],
   exports: [
     MylibComponent,
-    NgxPowsyblSldViewerComponent
+    NgxPowsyblNadViewerComponent
   ],
 })
 export class MylibModule { }

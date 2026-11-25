@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy, ChangeDetectorRef,
   Component,
   DestroyRef,
   HostListener,
@@ -16,11 +17,10 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {environment} from "../../../environments/environment";
 import {MatRippleModule} from "@angular/material/core";
-import {BehaviorSubject, mergeMap, of} from "rxjs";
+import {BehaviorSubject} from "rxjs";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import NavItemComponent from "@Resource/layout/nav-item/component";
-import LayoutSmComponent from "@Resource/layout/layout-sm/component";
 import {FormControl} from "@angular/forms";
 import {AppTheme, THEMES, UpdateTheme} from "@Store/reducers/theme-reducer";
 import {TTheme} from "@Global/model";
@@ -33,8 +33,7 @@ import {Store} from "@ngrx/store";
     CommonModule,
     RouterModule,
     MatSidenavModule, MatDividerModule, MatListModule, MatToolbarModule, MatIconModule, MatButtonModule,
-    MatRippleModule, MatDialogModule,
-    LayoutSmComponent, NavItemComponent
+    MatRippleModule, MatDialogModule, NavItemComponent
   ],
   providers: [MatDialog],
   templateUrl: 'template.html',
@@ -43,7 +42,7 @@ import {Store} from "@ngrx/store";
 export default class LayoutComponent implements OnInit {
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
   mode: MatDrawerMode;
-  openSidenav:boolean;
+  openSidenav: boolean = true;
   private destroyRef = inject(DestroyRef);
   environment = environment;
   isProdMode: boolean = environment.production;
@@ -59,23 +58,6 @@ export default class LayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.screenWidth$.asObservable().pipe(takeUntilDestroyed(this.destroyRef),
-        mergeMap((value) => {
-          if(value < 640) {
-            this.mode = 'over';
-             if(this.sidenav?.opened) {
-               return this.dialog.open(LayoutSmComponent,
-              {
-                maxWidth: '100vw',
-                maxHeight: '100vh',
-                height: '100%',
-                width: '100%',
-             }).afterClosed().pipe(takeUntilDestroyed(this.destroyRef))
-             }
-             return of(value)
-          }
-          return of(value);
-        })).subscribe((openSidenav: any) => this.openSidenav = !openSidenav);
   }
 
   changeTheme() {
@@ -104,16 +86,6 @@ export default class LayoutComponent implements OnInit {
   // onWindowScroll(event: any) {
   //   event.stopPropagation();
   // }
-
-  toggle() {
-      this.dialog.open(LayoutSmComponent, {
-        maxWidth: '100vw',
-        maxHeight: '100vh',
-        height: '100%',
-        width: '100%'})
-          .afterClosed().pipe(takeUntilDestroyed(this.destroyRef))
-          .subscribe((openSidenav: any) => this.openSidenav = !openSidenav);
-  }
 
   openedStart() {
     this.sidenav.mode = "side";

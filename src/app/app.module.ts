@@ -18,7 +18,7 @@ export const routes: Routes = [
         loadComponent: () => import('@Resource/core/component'),
           children: [
               { path: '',
-                  loadComponent: () => import('@Resource/child/child.component'),
+                  loadComponent: () => import('@Resource/powsybl/test.component'),
               },
           ]
       },
@@ -26,7 +26,7 @@ export const routes: Routes = [
         loadComponent: () => import('@Global/foundation/component'),
       },
       { path: 'lib',
-          loadComponent: () => import('@Resource/test/test.component'),
+          loadComponent: () => import('@Resource/powsybl/test.component'),
       },
       { path: 'settings',
           loadComponent: () => import('@Settings/local/component'),
