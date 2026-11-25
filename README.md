@@ -1,5 +1,10 @@
 # angular-app starter
 
-[![pages-build-deployment](https://github.com/romdhanisam/angular-app/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/romdhanisam/angular-app/actions/workflows/pages/pages-build-deployment)
+### Github pages
+[![pages-build-deployment](https://github.com/samirromdhani/angular-app/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/romdhanisam/angular-app/actions/workflows/pages/pages-build-deployment)
 
-https://romdhanisam.github.io/angular-app
+```shell
+npm run build:prod
+npx ng deploy --dir=dist/ --no-notfound --branch=gh-pages
+```
+

@@ -25,6 +25,7 @@
     "start:qa": "ng serve --configuration qa",
     "start:prod": "ng serve --configuration production",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "jest --no-cache",
     "test:cov": "jest --no-cache --coverage",

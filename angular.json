@@ -74,7 +74,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "https://romdhanisam.github.io/angular-app/"
+              "baseHref": "https://samirromdhani.github.io/angular-app/"
             },
             "development": {
               "buildOptimizer": false,
@@ -97,7 +97,7 @@
               "browserTarget": "angular-app:build:qa"
             },
             "development": {
-              "browserTarget": "angular-app:build:development",
+              "browserTarget": "angular-app:build:development"
             }
           },
           "defaultConfiguration": "development"

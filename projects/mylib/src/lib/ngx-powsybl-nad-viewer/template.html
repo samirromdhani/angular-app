@@ -4,11 +4,7 @@
         <mat-card-title>NAD</mat-card-title>
         <mat-card-subtitle>Network Area Diagram</mat-card-subtitle>
         <span class="spacer"></span>
-        <a *ngIf="showVersion" mat-button matIconSuffix color="primary" target="_blank"
-           [href]="'https://github.com/powsybl/powsybl-network-viewer/releases/tag/'+'v'+coreVersion" >
-            <img [ngSrc]="'https://www.svgrepo.com/show/333546/github.svg'" width="20" alt="Github link" height="20"/>
-            {{"v"+coreVersion}}
-        </a>
+        <p *ngIf="showVersion">{{"v"+coreVersion}}</p>
     </mat-card-header>
     <mat-card-content>
         <div #host class="nad-host"></div>

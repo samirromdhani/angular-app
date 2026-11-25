@@ -38,10 +38,13 @@ export default class TestComponent implements OnInit {
     this.diagram$
         .pipe(delay(500))
         .pipe(takeUntilDestroyed(this.destroyRef))
-        .subscribe(({ svg, metadata }) => {
-      this.svgContent = svg;
-      this.metadata = metadata;
-      this.loading = false;
+        .subscribe({
+          next: ({ svg, metadata }) => {
+            this.svgContent = svg;
+            this.metadata = metadata;
+            this.loading = false;
+            },
+          error: (err) => this.loading = false,
     });
   }
 }
